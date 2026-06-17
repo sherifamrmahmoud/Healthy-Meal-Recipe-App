@@ -10,7 +10,7 @@ A beautiful, responsive, and cross-platform Flutter application designed to help
 Here is a complete look at the application workflow, showcasing the main home dashboard, custom onboarding flow, and secure authentication interfaces.
 
 <p align="center">
-  <img src="mealapp 5.png" width="600" alt="Application Mockup Showcase">
+  <img src="assets/mealapp 5.png" width="600" alt="Application Mockup Showcase">
 </p>
 
 ### 🔄 Core User Flow
@@ -18,7 +18,7 @@ Below is a step-by-step preview of the core user journey, starting from the spla
 
 | 1. Your Path | 2. Popular Recipes | 3. Secure Sign In | 4. Easy Sign Up |
 | :---: | :---: | :---: | :---: |
-| <img src="mealapp 3.png" width="210" alt="Onboarding Screen"> | <img src="mealapp 4.png" width="210" alt="Splash Screen"> | <img src="mealapp 2.png" width="210" alt="Login Screen"> | <img src="mealapp 1.png" width="210" alt="Sign Up Screen"> |
+| <img src="assets/mealapp 3.png" width="210" alt="Onboarding Screen"> | <img src="assets/mealapp 4.png" width="210" alt="Splash Screen"> | <img src="assets/mealapp 2.png" width="210" alt="Login Screen"> | <img src="assets/mealapp 1.png" width="210" alt="Sign Up Screen"> |
 
 ---
 
