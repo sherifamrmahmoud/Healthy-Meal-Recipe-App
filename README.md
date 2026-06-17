@@ -11,7 +11,7 @@ The exact sequential journey a user takes when launching the application for the
 
 | 1. Splash Screen | 2. Onboarding Flow | 3. Secure Sign In | 4. Easy Sign Up |
 | :---: | :---: | :---: | :---: |
-| <img src="assets/mealapp 5_3.png" width="210" alt="Splash Screen"> | <img src="assets/mealapp 3_3.png" width="210" alt="Onboarding Screen"> | <img src="assets/mealapp 2_3.png" width="210" alt="Login Screen"> | <img src="assets/mealapp 1_3.png" width="210" alt="Sign Up Screen"> |
+| <img src="assets/mealapp 5.png" width="210" alt="Splash Screen"> | <img src="assets/mealapp 3.png" width="210" alt="Onboarding Screen"> | <img src="assets/mealapp 2.png" width="210" alt="Login Screen"> | <img src="assets/mealapp 1.png" width="210" alt="Sign Up Screen"> |
 
 ---
 
@@ -20,7 +20,7 @@ Once authenticated, the user unlocks the full experience: browsing meals, diving
 
 | 5. Home Dashboard | 6. Meal Details & Macros | 7. My Favorites |
 | :---: | :---: | :---: |
-| <img src="assets/mealapp 6_2.png" width="260" alt="Home Dashboard"> | <img src="assets/mealapp 7_2.png" width="260" alt="Meal Details"> | <img src="assets/mealapp 8_2.png" width="260" alt="Favorites Screen"> |
+| <img src="assets/mealapp 6.png" width="260" alt="Home Dashboard"> | <img src="assets/mealapp 7.png" width="260" alt="Meal Details"> | <img src="assets/mealapp 8.png" width="260" alt="Favorites Screen"> |
 
 ---
 
