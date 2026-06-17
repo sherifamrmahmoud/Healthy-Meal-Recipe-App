@@ -1,44 +1,74 @@
+Markdown
 # 🥗 Healthy Meal & Recipe App
 
 A beautiful, responsive, and cross-platform Flutter application designed to help users discover healthy food recipes, track meal metrics, and manage their cooking goals. Built with an intuitive UI/UX and a scalable clean architecture using the BLoC/Cubit pattern.
 
 ---
 
-## 📸 Screenshots
+## 📸 Application User Flow & Screenshots
 
-### 📱 Application Overview
-Here is a complete look at the application workflow, showcasing the main home dashboard, custom onboarding flow, and secure authentication interfaces.
+### 🔄 1. Onboarding & Authentication Sequence
+The exact sequential journey a user takes when launching the application for the first time, leading from the initial splash to account creation.
 
-<p align="center">
-  <img src="assets/mealapp 5.png" width="600" alt="Application Mockup Showcase">
-</p>
-
-### 🔄 Core User Flow
-Below is a step-by-step preview of the core user journey, starting from the splash screen to onboarding and user authentication.
-
-| 1. Your Path | 2. Popular Recipes | 3. Secure Sign In | 4. Easy Sign Up |
+| 1. Splash Screen | 2. Onboarding Flow | 3. Secure Sign In | 4. Easy Sign Up |
 | :---: | :---: | :---: | :---: |
-| <img src="assets/mealapp 3.png" width="210" alt="Onboarding Screen"> | <img src="assets/mealapp 4.png" width="210" alt="Splash Screen"> | <img src="assets/mealapp 2.png" width="210" alt="Login Screen"> | <img src="assets/mealapp 1.png" width="210" alt="Sign Up Screen"> |
+| <img src="assets/mealapp 5_3.png" width="210" alt="Splash Screen"> | <img src="assets/mealapp 3_3.png" width="210" alt="Onboarding Screen"> | <img src="assets/mealapp 2_3.png" width="210" alt="Login Screen"> | <img src="assets/mealapp 1_3.png" width="210" alt="Sign Up Screen"> |
 
 ---
 
-## ✨ Features
+### 📱 2. Core Features & App Experience
+Once authenticated, the user unlocks the full experience: browsing meals, diving deep into ingredients/macros, and managing their favorites list.
 
-*   **Seamless Onboarding Flow:** A welcoming, high-conversion introductory interface to smoothly guide users into the app.
-*   **Secure Authentication:** Integrated Sign In and Sign Up flows supporting standard credentials and social authentication layouts.
-*   **Categorized Meal Browsing:** Filter and explore delicious recipes organized by categories such as **Breakfast**, **Lunch**, and **Dinner**.
-*   **Macro Tracking & Metrics:** Clear visibility on essential cooking insights, including preparation times and calorie metrics ($Kcal$) for every dish.
-*   **Intuitive UI/UX Design:** Built entirely from the ground up using reusable components, clean padding rules, and consistent dynamic styling.
-*   **Global State Synchronization:** Perfectly synced custom bottom navigation bar keeping data consistent across favorite lists and category sections.
+| 5. Home Dashboard | 6. Meal Details & Macros | 7. My Favorites |
+| :---: | :---: | :---: |
+| <img src="assets/mealapp 6_2.png" width="260" alt="Home Dashboard"> | <img src="assets/mealapp 7_2.png" width="260" alt="Meal Details"> | <img src="assets/mealapp 8_2.png" width="260" alt="Favorites Screen"> |
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+## 📖 Detailed Project Explanation
 
-This project implements **Clean Code Architecture principles** combined with high-performing cloud backends:
+This application is far more than just static UI views. It is a fully functional, metric-focused architecture designed to manage health and dietary goals through the following mechanisms:
 
-*   **Framework:** `Flutter` (Cross-platform Android, iOS, Web)
-*   **Language:** `Dart`
-*   **State Management:** `Bloc / Cubit Pattern` (Separating presentation from core business logic)
-*   **Backend & DB:** `Firebase Auth` & `Cloud Firestore` (For reliable real-time updates and secure data handling)
-*   **API Service Integration:** Designed to interact seamlessly with local data repositories and `REST APIs`
+### 1️⃣ User Journey & Flow
+* **Welcome Experience:** The app begins with an elegant **Splash Screen** displaying the application logo, which transitions into an interactive **Onboarding Flow** explaining how the platform helps optimize daily lifestyle habits.
+* **Identity & Authentication:** Users can securely register (**Sign Up**) or authenticate (**Login**). The UI layouts are pre-configured to easily scale into social logins (Google, Apple, Facebook).
+* **Core Navigation:** Upon authentication, entry views are cleared from the navigation stack to optimize memory, directing the user to the central dashboard managed by a sleek, custom persistent **Bottom Navigation Bar**.
+
+### 2️⃣ Reactive Features & Logic
+* **Dynamic Category Filtering:** The application populates dietary divisions (Breakfast, Lunch, Dinner, Snacks) via custom interaction chips. Selecting any category triggers the state management to instantaneously filter and render matching entries.
+* **Granular Macro & Ingredient Analytics:** Clicking on any recipe transitions the user to a detailed overview featuring high-resolution assets, itemized ingredient listings, and precise micro/macro nutritional tracking data including Carbs, Proteins, Fats, and total Calorie metrics ($Kcal$).
+* **Synchronized Favorites Lifecycle:** Users can add or remove items globally. The reactive state management handles synchronous UI updates, ensuring that if an item is un-favorited from the favorites list, the state reflects properly upon returning to the home viewport.
+
+---
+
+## 🛠️ Code Architecture Breakdown
+
+The project strictly follows **Clean Code and SOLID principles**, isolating different modules to maintain a clear separation of concerns:
+
+lib/
+│
+├── core/                  # Global shared components across the entire codebase
+│   ├── styles/            # Theme management, typographic definitions, and color schemas
+│   └── widgets/           # Global re-usable components (custom buttons, fields, etc.)
+│
+└── features/              # Modular architecture separated by features
+├── auth/              # Sign In, Registration UI components, and Authentication Cubit
+├── favorites/         # Favorites view ecosystem and state handlers
+├── home/              # Primary dashboard, component cards, and core meal models
+│   ├── cubit/         # Home lifecycle and logic states (HomeCubit & HomeStates)
+│   └── widgets/       # Isolated dashboard views (Category Section, Meals Grid)
+└── profile/           # User configuration profiles and administrative settings
+
+
+* **Repository Pattern:** Remote and local data querying logic is completely abstracted within a dedicated `MealsRepository`. This simplifies swapping hardcoded data collections with active cloud configurations like `Cloud Firestore` or external `REST APIs` downstream without changing presentation logic.
+* **State Management:** All client interactions communicate directly with predictable `Bloc/Cubit` streams. UI layers smoothly respond to distinct immutable states (`Loading`, `Success`, `Failure`), maximizing performance and memory efficiency.
+
+---
+
+## 🚀 Tech Stack Summary
+
+* **Framework:** `Flutter` (Cross-platform Android, iOS, Web)
+* **Language:** `Dart`
+* **State Management:** `Bloc / Cubit Pattern`
+* **Backend & Security:** `Firebase Auth` & `Cloud Firestore`
+* **Data Layer Architecture:** `REST APIs` & Isolated Repositories
