@@ -4,7 +4,7 @@ A beautiful, responsive, and cross-platform Flutter application designed to help
 <p align="center">
   <img src="assets/mealapp 1.png" width="320" alt="App Main Showcase">
 </p>
----
+
 
 ## 📸 Application User Flow & Screenshots
 
