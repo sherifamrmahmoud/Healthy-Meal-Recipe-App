@@ -1,13 +1,9 @@
-<h1 align="center">🥗 Healthy Meal & Recipe App</h1>
+# 🥗 Healthy Meal & Recipe App
 
-<p align="center">
-  <strong>A beautiful, responsive, and cross-platform Flutter application designed to help users discover healthy food recipes, track meal metrics, and manage their cooking goals. Built with an intuitive UI/UX and a scalable clean architecture using the BLoC/Cubit pattern.</strong>
-</p>
-
+A beautiful, responsive, and cross-platform Flutter application designed to help users discover healthy food recipes, track meal metrics, and manage their cooking goals. Built with an intuitive UI/UX and a scalable clean architecture using the BLoC/Cubit pattern.
 <p align="center">
   <img src="assets/mealapp 1.png" width="320" alt="App Main Showcase">
 </p>
-
 ---
 
 ## 📸 Application User Flow & Screenshots
