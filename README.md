@@ -1,7 +1,7 @@
 # 🥗 Healthy Meal & Recipe App
 
 A beautiful, responsive, and cross-platform Flutter application designed to help users discover healthy food recipes, track meal metrics, and manage their cooking goals. Built with an intuitive UI/UX and a scalable clean architecture using the BLoC/Cubit pattern.
-
+<img src="assets/mealapp 1.png" width="210">
 ---
 
 ## 📸 Application User Flow & Screenshots
@@ -11,7 +11,7 @@ The exact sequential journey a user takes when launching the application for the
 
 | 1. Splash Screen | 2. Onboarding Flow | 3. Secure Sign In | 4. Easy Sign Up |
 | :---: | :---: | :---: | :---: |
-| <img src="assets/mealapp 5.png" width="210" alt="Splash Screen"> | <img src="assets/mealapp 3.png" width="210" alt="Onboarding Screen"> | <img src="assets/mealapp 2.png" width="210" alt="Login Screen"> | <img src="assets/mealapp 1.png" width="210" alt="Sign Up Screen"> |
+| <img src="assets/mealapp 2.png" width="210" alt="Splash Screen"> | <img src="assets/mealapp 3.png" width="210" alt="Onboarding Screen"> | <img src="assets/mealapp 5.png" width="210" alt="Login Screen"> | <img src="assets/mealapp 4.png" width="210" alt="Sign Up Screen"> |
 
 ---
 
@@ -20,7 +20,7 @@ Once authenticated, the user unlocks the full experience: browsing meals, diving
 
 | 5. Home Dashboard | 6. Meal Details & Macros | 7. My Favorites |
 | :---: | :---: | :---: |
-| <img src="assets/mealapp 6.png" width="260" alt="Home Dashboard"> | <img src="assets/mealapp 7.png" width="260" alt="Meal Details"> | <img src="assets/mealapp 8.png" width="260" alt="Favorites Screen"> |
+| <img src="assets/mealapp 6.png" width="260" alt="Home Dashboard"> | <img src="assets/mealapp 8.png" width="260" alt="Meal Details"> | <img src="assets/mealapp 7.png" width="260" alt="Favorites Screen"> |
 
 ---
 
@@ -43,6 +43,20 @@ This application is far more than just static UI views. It is a fully functional
 ## 🛠️ Code Architecture Breakdown
 
 The project strictly follows **Clean Code and SOLID principles**, isolating different modules to maintain a clear separation of concerns:
+lib/
+│
+├── core/                  # Global shared components across the entire codebase
+│   ├── styles/            # Theme management, typographic definitions, and color schemas
+│   └── widgets/           # Global re-usable components (custom buttons, fields, etc.)
+│
+└── features/              # Modular architecture separated by features
+├── auth/              # Sign In, Registration UI components, and Authentication Cubit
+├── favorites/         # Favorites view ecosystem and state handlers
+├── home/              # Primary dashboard, component cards, and core meal models
+│   ├── cubit/         # Home lifecycle and logic states (HomeCubit & HomeStates)
+│   └── widgets/       # Isolated dashboard views (Category Section, Meals Grid)
+└── profile/           # User configuration profiles and administrative settings
+
 * **Repository Pattern:** Remote and local data querying logic is completely abstracted within a dedicated `MealsRepository`. This simplifies swapping hardcoded data collections with active cloud configurations like `Cloud Firestore` or external `REST APIs` downstream without changing presentation logic.
 * **State Management:** All client interactions communicate directly with predictable `Bloc/Cubit` streams. UI layers smoothly respond to distinct immutable states (`Loading`, `Success`, `Failure`), maximizing performance and memory efficiency.
 
