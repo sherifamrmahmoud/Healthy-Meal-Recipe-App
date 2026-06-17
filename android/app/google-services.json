@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "842874128597",
+    "project_id": "mealsapp-13572",
+    "storage_bucket": "mealsapp-13572.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842874128597:android:03076a888300f8ce32ba5c",
+        "android_client_info": {
+          "package_name": "com.example.nti5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAighnwlwzSAlsf9UPpyH9WN4FklTMWODQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
